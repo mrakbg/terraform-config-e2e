@@ -57,6 +57,12 @@ resource "google_compute_instance" "compute_engine" {
      }
    } 
     tags = ["anuj"]
+ metadata = {
+    DB_HOST     = "34.56.34.56"
+    DB_USER     = "mrakbg"
+    DB_PASSWORD = "Anuj@1738@"
+    DB_NAME     = "mydb"
+  }
 }
 
 

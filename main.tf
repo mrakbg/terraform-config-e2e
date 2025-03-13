@@ -25,12 +25,12 @@ resource "google_compute_subnetwork" "subnetwork" {
 }
 
 resource "google_compute_firewall" "allow-3000" {
-     name = "allow-3000"
+     name = "allow-80"
      network = google_compute_network.network.id
 
      allow {
      protocol = "tcp"
-     ports = ["3000"]
+     ports = ["80"]
        
      }
     
@@ -57,12 +57,6 @@ resource "google_compute_instance" "compute_engine" {
      }
    } 
     tags = ["anuj"]
- metadata = {
-    DB_HOST     = "34.56.34.56"
-    DB_USER     = "mrakbg"
-    DB_PASSWORD = "Anuj@1738@"
-    DB_NAME     = "mydb"
-  }
 }
 
 

@@ -39,7 +39,7 @@ resource "google_compute_firewall" "allow-http" { # Renamed for clarity
 
 # Compute Engine instance
 resource "google_compute_instance" "compute_engine" {
-  name         = "e2e"
+  name         = "e2eyui"
   machine_type = "e2-micro"
   zone         = "us-central1-b"
 

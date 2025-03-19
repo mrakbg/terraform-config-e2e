@@ -9,6 +9,16 @@ terraform {
     prefix = "terraform/state"       # Define state storage path
   }
 }
+terraform {
+  backend "http" {
+    address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/SFTY_Training/workspaces/aguptaworkspace/terraform-backend?accountIdentifier=ucHySz2jQKKWQweZdXyCog"
+    username = "harness"
+    lock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/SFTY_Training/workspaces/aguptaworkspace/terraform-backend/lock?accountIdentifier=ucHySz2jQKKWQweZdXyCog"
+    lock_method = "POST"
+    unlock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/SFTY_Training/workspaces/aguptaworkspace/terraform-backend/lock?accountIdentifier=ucHySz2jQKKWQweZdXyCog"
+    unlock_method = "DELETE"
+  }
+}
 
 # Create a VPC network
 resource "google_compute_network" "network" {

@@ -42,7 +42,7 @@ resource "google_compute_instance" "compute_engine" {
   name         = "e2eyui"
   machine_type = "e2-micro"
   zone         = "us-central1-b"
-  count        = 2
+  count        = 3
 
   network_interface {
     network    = google_compute_network.network.id  # Correct reference
